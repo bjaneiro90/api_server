@@ -35,7 +35,7 @@ func handleHealth(writer http.ResponseWriter, request *http.Request) {
 		http.Error(writer, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
 	}
 
-	writeResponse(writer, "OK!")
+	writeResponse(writer, "ok!")
 }
 
 func handleNewEndpoint(writer http.ResponseWriter, request *http.Request) {
@@ -48,7 +48,6 @@ func handleNewEndpoint(writer http.ResponseWriter, request *http.Request) {
 
 func writeResponse(writer http.ResponseWriter, responseString string) {
 	response := []byte(responseString)
-	fmt.Println(response)
 
 	_, err := writer.Write(response)
 	if err != nil {

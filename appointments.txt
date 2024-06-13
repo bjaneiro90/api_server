@@ -1,0 +1,5 @@
+# CURL 
+    * utilizado para fazer petições ao servidor
+
+1 - curl http://localhost:8000/hello-world 
+    * devolve a resposta na CLI do servidor
